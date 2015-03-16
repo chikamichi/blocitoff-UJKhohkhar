@@ -46,3 +46,5 @@ end
 
 # ADDED GEMS START HERE:
 gem 'bootstrap-sass'
+
+gem 'devise'
