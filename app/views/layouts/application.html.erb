@@ -12,9 +12,9 @@
     <ul class="nav nav-tabs">
       <li><%= link_to "Home", root_url %></li>
     </ul>
-
-<%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <%= yield %>
   </div>
-
 </body>
 </html>
