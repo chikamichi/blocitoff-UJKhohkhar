@@ -1,6 +1,6 @@
-<%= form_for [list, list.items.new ], remote: true do |f| %>
+<%= form_for [user, user.items.new ], remote: true do |f| %>
   <%= f.label :comment %>
-  <%= f.text_are :name, class: 'form-control', placeholder: "Enter item." %>
+  <%= f.text_area :name, class: 'form-control', placeholder: "Enter item." %>
   <div class="form-group">
   <%= f.submit "Save", class: 'btn btn-success' %>
   </div>
