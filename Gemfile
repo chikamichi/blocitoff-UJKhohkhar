@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.8'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -17,7 +14,6 @@ gem 'coffee-rails', '~> 4.0.0'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
@@ -46,3 +42,25 @@ end
 
 # ADDED GEMS START HERE:
 gem 'bootstrap-sass'
+
+gem 'devise'
+
+gem 'faker'
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
+# Use sqlite3 as the database for Active Record
+group :development do
+  gem 'sqlite3'
+end
+
+gem 'figaro', '1.0'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+  gem 'capybara'
+  gem 'factory_girl_rails', '~> 4.0'
+end
