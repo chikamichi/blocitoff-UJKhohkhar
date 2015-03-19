@@ -11,6 +11,7 @@ require 'faker'
   user.save!
 end
 users = User.all
+puts "#{User.count} users created"
 
 #Create items
 25.times do
@@ -20,7 +21,6 @@ users = User.all
   )
 end
 items = Item.all
+puts "#{Item.count} items created"
 
 puts "Seed finished"
-puts "#{User.count} users created"
-puts "#{Item.count} items created"
