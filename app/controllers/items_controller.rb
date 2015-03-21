@@ -1,14 +1,22 @@
 class ItemsController < ApplicationController
   def create
     @item = current_user.items.create(item_params)
-    redirect_to user_path
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def destroy
     @user = User.find(params[:user_id])
     @item = Item.find(params[:id])
     @item.destroy
-    redirect_to :back
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   private
